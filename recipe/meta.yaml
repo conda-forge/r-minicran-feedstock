@@ -15,8 +15,8 @@ source:
   sha256: ed413857e42c489a1aa7f4a401325e05ddd07e20ef7c1a60dca8bd73071f3ec3
 
 build:
-  number: 0
-  skip: true  # [win32]
+  noarch: generic
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,7 +45,7 @@ about:
   home: https://github.com/andrie/miniCRAN
   license_family: GPL2
   license: GPL-2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
   license_file: '{{ environ["PREFIX"] }}\R\share\licenses/GPL-2'      # [win]
   summary: Makes it possible to create an internally consistent repository consisting of selected
     packages from CRAN-like repositories. The user specifies a set of desired packages,
