@@ -1,4 +1,4 @@
-{% set version = '0.2.11' %}
+{% set version = '0.2.12' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/miniCRAN_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/miniCRAN/miniCRAN_{{ version }}.tar.gz
-  sha256: ea1a8b641f8b3af73f0ece67468a2879e5005437c40b879498beb31b8f19ccb9
+  sha256: 8520d47b09b672aa7130c773db4c1c5f24b2c11401c9eb5a1fab61e40dead9cb
 
 build:
   merge_build_host: True  # [win]
@@ -26,11 +26,13 @@ requirements:
   host:
     - r-base
     - r-xml
+    - r-assertthat
     - r-httr
     - r-igraph
   run:
     - r-base
     - r-xml
+    - r-assertthat
     - r-httr
     - r-igraph
 
@@ -57,25 +59,27 @@ extra:
     - mariusvniekerk
 
 # Package: miniCRAN
-# Date: 2018-01-15
-# Version: 0.2.11
-# Authors@R: c(person("Microsoft Corporation", role="cph"), person("Andrie", "de Vries", role=c("aut", "cre", "cph"), email="apdevries@gmail.com"), person("Alex", "Chubaty", role="ctb", email="alex.chubaty@gmail.com"))
+# Date: 2019-07-06
+# Version: 0.2.12
+# Authors@R: c( person("Andrie", "de Vries", role=c("aut", "cre", "cph"), email="apdevries@gmail.com"), person("Alex", "Chubaty", role="ctb", email="alex.chubaty@gmail.com"), person("Microsoft Corporation", role="cph") )
 # License: GPL-2
-# Copyright: Microsoft Corporation, Andrie de Vries
+# Copyright: Andrie de Vries, Microsoft Corporation
 # Title: Create a Mini Version of CRAN Containing Only Selected Packages
 # Description: Makes it possible to create an internally consistent repository consisting of selected packages from CRAN-like repositories. The user specifies a set of desired packages, and 'miniCRAN' recursively reads the dependency tree for these packages, then downloads only this subset. The user can then install packages from this repository directly, rather than from CRAN.  This is useful in production settings, e.g. server behind a firewall, or remote locations with slow (or zero) Internet access.
 # URL: https://github.com/andrie/miniCRAN
 # BugReports: https://github.com/andrie/miniCRAN/issues
 # SystemRequirements: Imports the `curl` and `XML` packages. These have system requirements on `libxml2-devel`, `libcurl-devel` and `openssl-devel`.
-# Imports: graphics, httr, methods, stats, tools, utils, XML, igraph,
-# Suggests: devtools, knitr, rmarkdown, testthat(>= 0.9), covr, withr, mockery, testthis
+# Imports: graphics, httr, methods, stats, tools, utils, XML, igraph, assertthat
+# Suggests: devtools, knitr, rmarkdown, testthat (>= 2.1.0), covr, withr, mockery, testthis, roxygen2
 # LazyData: true
 # LazyLoad: true
 # VignetteBuilder: knitr
-# RoxygenNote: 6.0.1
+# RoxygenNote: 6.1.1
+# Encoding: UTF-8
+# Language: en-GB
 # NeedsCompilation: no
-# Packaged: 2018-01-15 15:40:51 UTC; apdev
-# Author: Microsoft Corporation [cph], Andrie de Vries [aut, cre, cph], Alex Chubaty [ctb]
+# Packaged: 2019-07-06 18:07:37 UTC; apdev
+# Author: Andrie de Vries [aut, cre, cph], Alex Chubaty [ctb], Microsoft Corporation [cph]
 # Maintainer: Andrie de Vries <apdevries@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2018-01-15 18:52:52 UTC
+# Date/Publication: 2019-07-06 18:30:03 UTC
