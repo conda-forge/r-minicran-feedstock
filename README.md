@@ -5,7 +5,7 @@ Home: https://github.com/andrie/miniCRAN
 
 Package license: GPL-2
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Makes it possible to create an internally consistent repository consisting of selected packages from CRAN-like repositories. The user specifies a set of desired packages, and 'miniCRAN' recursively reads the dependency tree for these packages, then downloads only this subset. The user can then install packages from this repository directly, rather than from CRAN.  This is useful in production settings, e.g. server behind a firewall, or remote locations with slow (or zero) Internet access.
 
