@@ -3,13 +3,11 @@ About r-minicran
 
 Home: https://github.com/andrie/miniCRAN
 
-Package license: GPL-2
+Package license: GPL-2.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-minicran-feedstock/blob/master/LICENSE.txt)
 
 Summary: Makes it possible to create an internally consistent repository consisting of selected packages from CRAN-like repositories. The user specifies a set of desired packages, and 'miniCRAN' recursively reads the dependency tree for these packages, then downloads only this subset. The user can then install packages from this repository directly, rather than from CRAN.  This is useful in production settings, e.g. server behind a firewall, or remote locations with slow (or zero) Internet access.
-
-
 
 Current build status
 ====================
@@ -38,6 +36,7 @@ Installing `r-minicran` from the `conda-forge` channel can be achieved by adding
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `r-minicran` can be installed with:
@@ -108,9 +107,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
