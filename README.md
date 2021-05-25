@@ -3,7 +3,7 @@ About r-minicran
 
 Home: https://github.com/andrie/miniCRAN
 
-Package license: GPL-2
+Package license: GPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-minicran-feedstock/blob/master/LICENSE.txt)
 
