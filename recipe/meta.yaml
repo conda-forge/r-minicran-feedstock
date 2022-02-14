@@ -1,4 +1,4 @@
-{% set version = "0.2.14" %}
+{% set version = "0.2.16" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/miniCRAN_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/miniCRAN/miniCRAN_{{ version }}.tar.gz
-  sha256: 434ad59fa5324d3702893eb9a0e0c19fd03501358221ef72311db1534f7239c4
+  sha256: 78d9c105d109cacf2339c1e6fa9c9a0cbab9124ec1e9bbe78ca5802360e625e7
 
 build:
   merge_build_host: true  # [win]
