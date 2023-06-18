@@ -1,11 +1,11 @@
-About r-minicran
-================
+About r-minicran-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-minicran-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/andrie/miniCRAN
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-minicran-feedstock/blob/main/LICENSE.txt)
 
 Summary: Makes it possible to create an internally consistent repository consisting of selected packages from CRAN-like repositories. The user specifies a set of desired packages, and 'miniCRAN' recursively reads the dependency tree for these packages, then downloads only this subset. The user can then install packages from this repository directly, rather than from CRAN.  This is useful in production settings, e.g. server behind a firewall, or remote locations with slow (or zero) Internet access.
 
